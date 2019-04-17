@@ -4,6 +4,8 @@
     <title>@yield('title', 'Weibo App')</title>
     <link rel="stylesheet" href="{{ mix('css/app.css') }}">
   </head>
+
+
   <body>
     @include('layouts._header')
 
@@ -14,5 +16,7 @@
         @include('layouts._footer')
       </div>
     </div>
+
+    <script src="{{ mix('js/app.js') }}"></script>
   </body>
 </html>
