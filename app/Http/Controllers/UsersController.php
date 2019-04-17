@@ -93,8 +93,6 @@ class UsersController extends Controller
     {
         $view = 'emails.confirm';
         $data = compact('user');
-        $from = 'summer@example.com';
-        $name = 'Summer';
         $to = $user->email;
         $subject = "Thanks for signing up for the Weibo app!Please confirm your email address.";
 
