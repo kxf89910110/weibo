@@ -5,6 +5,6 @@
   </a>
 
   <div class="float-right">
-    <a href="/about">About</a>
+    <a href="{{ route('about') }}">About</a>
   </div>
 </footer>
