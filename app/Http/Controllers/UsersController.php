@@ -50,7 +50,7 @@ class UsersController extends Controller
             'password' => bcrypt($request->password)
         ]);
 
-         $this->sendEmailConfirmationTo($user);
+        $this->sendEmailConfirmationTo($user);
         session()->flash('success', 'The verification email has been sent to your registered email address, please check it.');
         return redirect('/');
     }
@@ -96,8 +96,8 @@ class UsersController extends Controller
         $to = $user->email;
         $subject = "Thanks for signing up for the Weibo app!Please confirm your email address.";
 
-        Mail::send($view, $data, function ($message) use ($from, $name, $to, $subject) {
-            $message->from($from, $name)->to($to)->subject($subject);
+        Mail::send($view, $data, function ($message) use ($to, $subject) {
+            $message->to($to)->subject($subject);
         });
     }
 
