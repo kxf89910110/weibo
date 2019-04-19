@@ -4,7 +4,7 @@
       <form action="{{ route('followers.destroy', $user->id) }}" method="post">
         {{ csrf_field() }}
         {{ method_field('DELETE') }}
-        <button type="submit" class="btn btn-sm btn-outline-primary">unsubscribe</button>
+        <button type="submit" class="btn btn-sm btn-outline-primary">Unsubscribe</button>
       </form>
     @else
       <form action="{{ route('followers.store', $user->id) }}" method="post">
